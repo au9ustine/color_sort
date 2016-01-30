@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block customized_header %}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+  {% for url_addr, val in img_urls %}
+  <div class="col-md-4">
+    <center>
+      <img src="{{ url_addr }}" alt="{{ url_addr }}" class="thumbnail"></img>
+      <p>{{ val }}</p>
+    </center>
+  </div>
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}
